@@ -252,13 +252,13 @@ resource "aws_iam_role_policy_attachment" "lbc" {
 }
 
 resource "aws_s3_bucket" "reports" {
-  bucket = "ai-code-reviewer-reports"
+  # Added a unique identifier to bypass the duplicate name error
+  bucket = "ai-code-reviewer-reports-suyash-prod" 
 
   tags = {
     Environment = var.environment
   }
 }
-
 resource "aws_ecr_repository" "gateway" {
   name                 = "gateway"
   image_tag_mutability = "MUTABLE"
