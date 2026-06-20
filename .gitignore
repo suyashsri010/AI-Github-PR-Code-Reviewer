@@ -53,5 +53,5 @@ logs/
 *.pem
 *.key
 *.crt
-secrets/
-secrets.yaml
+infra/k8s/secret.yaml
+infra/k8s/secret.yaml
